@@ -1,0 +1,11 @@
+<div class="boxed">
+    <form action="/deposit" method="POST">
+        <h3 class="text-muted">Deposit</h3>
+        <div class="input-group mb-3">
+            <input name="deposit" type="number" class="form-control" aria-describedby="button-deposit">
+            <button class="btn btn-outline-primary" type="submit" id="button-deposit">Add Funds</button>
+        </div>
+    </form>
+
+    {{>transactions}}
+</div>

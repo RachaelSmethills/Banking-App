@@ -1,0 +1,13 @@
+<div class="boxed">
+    <form action="/friend" method="POST">
+        <h3 class="text-muted pull-right">Friend Request</h3>
+
+        <div class="input-group mb-3">
+            <input name="email" type="email" class="form-control" aria-describedby="button-email">
+            <button class="btn btn-outline-secondary" type="submit" id="button-email">Submit</button>
+        </div>
+    </form>
+    <br/>
+    <br/>
+    {{>friends}}
+</div>

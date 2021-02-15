@@ -1,0 +1,18 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">
+      {{#if user}}
+          <div class="">{{user.username}}</div>
+      {{else}}
+          Login / Register
+      {{/if}}
+    </li>
+  </ol>
+</nav>
+
+<div class="container main">
+
+    {{>deposit}}
+    {{>request}}
+</div>
+

@@ -1,0 +1,9 @@
+{{#if progressBarData.showProgressBar}}
+<div class="container">
+    <div class="progress">
+        <div class="progress-bar bg-info" role="progressbar" style="width: {{progressBarData.todoPercentage}}%" aria-valuenow="{{progressBarData.todoPercentage}}" aria-valuemin="0" aria-valuemax="100">{{progressBarData.todoPercentage}}%</div>
+        <div class="progress-bar bg-warning" role="progressbar" style="width: {{progressBarData.doingPercentage}}%" aria-valuenow="{{progressBarData.doingPercentage}}" aria-valuemin="0" aria-valuemax="100">{{progressBarData.doingPercentage}}%</div>
+        <div class="progress-bar bg-success" role="progressbar" style="width: {{progressBarData.completedPercentage}}%" aria-valuenow="{{progressBarData.completedPercentage}}" aria-valuemin="0" aria-valuemax="100">{{progressBarData.completedPercentage}}%</div>    
+    </div>
+</div>
+{{/if}}

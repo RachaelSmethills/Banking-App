@@ -1,0 +1,23 @@
+<div>
+    {{#if user.transactions.length}}
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Amount</th>
+      <th scope="col">From</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each user.transactions}}
+    <tr>
+      <th scope="row">£{{this.amount}}</th>
+      <td>{{this.from}}</td>
+      <td>{{this.date}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+    {{/if}}
+
+</div>

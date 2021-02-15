@@ -1,0 +1,39 @@
+<div>
+<ul class="list-group list-group-flush">
+    {{#each friends}}
+        {{#if this.pending}}
+            <li class="list-group-item list-group-item-warning">
+
+        {{else}}
+                <li class="list-group-item">
+        {{/if}}
+            
+        {{this.name}}
+
+        {{#if this.pending}}
+            <a href="/friend/accept/{{this.validation}}">Accept</a>
+        {{/if}}
+
+        {{#unless this.pending}}
+            <form action="/friend/pay" method="POST">
+                <input type="hidden" value="{{this.name}}" name="name">
+                <div class="input-group mb-3">
+                    <input name="amount" type="number" class="form-control" aria-describedby="button-{{this.name}}">
+                    <button class="btn btn-outline-primary" type="submit" id="button-{{this.name}}">Send Funds</button>
+                </div>
+            </form>
+        {{/unless}}
+
+        </li>
+    {{/each}}
+
+    {{#each pendingRequests}}
+        <li class="list-group-item list-group-item-warning">
+            
+        {{this.username}} <span class="text-muted">*Pending</span>
+
+        </li>
+    {{/each}}
+
+</ul>
+</div>

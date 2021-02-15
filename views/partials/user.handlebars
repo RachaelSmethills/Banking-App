@@ -1,0 +1,9 @@
+{{#if user}}
+<div id="loginSquare">
+    <div class="flex-container fixed-height users">
+        <div>Account: {{user.username}}</div>
+        <div>Current Balance: £{{user.balance}}</div>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+{{/if}}
